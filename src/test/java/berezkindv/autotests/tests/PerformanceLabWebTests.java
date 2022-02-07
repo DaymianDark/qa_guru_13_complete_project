@@ -1,28 +1,33 @@
 package berezkindv.autotests.tests;
 
 import berezkindv.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class GeneratedTests extends TestBase {
+public class PerformanceLabWebTests extends TestBase {
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
-    @DisplayName("Performance Lab select product should clickable")
+    @DisplayName("Performance Lab web tests")
     void generatedTest() {
         step("Open https://www.performance-lab.ru", () -> {
             open("https://www.performance-lab.ru");
         });
 
-        step("product site check", () -> {
-            $("#menu-item-317").$(byText("Услуги и продукты")).shouldBe(visible);
+        step("hover on menu", () -> {
+            $("#menu-item-317").$(byText("Услуги и продукты")).hover();
+        });
+
+        step("open menu check", () -> {
+            $("div[class='full_menu_top']").shouldHave(text("Тестирование сайта"));
         });
     }
 
