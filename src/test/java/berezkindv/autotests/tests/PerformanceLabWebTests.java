@@ -36,7 +36,7 @@ public class PerformanceLabWebTests extends TestBase {
         step("Открываем страницу https://www.performance-lab.ru", () ->
             open("https://www.performance-lab.ru"));
 
-        step("hover on menu", () -> {
+        step("Разворачиваем меню", () -> {
             $("#menu-item-317").$(byText("Услуги и продукты")).hover();
         });
 
@@ -52,7 +52,7 @@ public class PerformanceLabWebTests extends TestBase {
         step("Открываем страницу https://www.performance-lab.ru", () ->
             open("https://www.performance-lab.ru"));
 
-        step("hover on menu", () -> {
+        step("Разворачиваем меню", () -> {
             $("#menu-item-1619").$(byText("Вакансии")).hover();
         });
 
@@ -64,11 +64,11 @@ public class PerformanceLabWebTests extends TestBase {
     @Test
     @Description("Menu item 'Блог' check")
     @DisplayName("Проверка пункта 'Блог' в верхнем меню")
-    void menuBlogTest() {
+     void menuBlogTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
             open("https://www.performance-lab.ru"));
 
-        step("clock on menu", () ->
+        step("Переходим в 'Блог'", () ->
             $("#menu-item-2613").$(byText("Блог")).click());
 
         step ("Проверяем открылась ли страница 'Блог'", () -> {
@@ -79,27 +79,12 @@ public class PerformanceLabWebTests extends TestBase {
     @Test
     @Description("Phone number check")
     @DisplayName("Проверка соответствия номера телефона '7-495-989-6165'")
-    void phoneNumberTest() {
+    void phoneNumberCheckTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
             open("https://www.performance-lab.ru"));
 
         step("Проверяем соответствие номера телефона", () -> {
             $(".main-page").$("div[class='phone']").shouldHave(text("7-495-989-6165"));
-        });
-    }
-
-    @Test
-    @Description("Page console log should not have errors")
-    @DisplayName("Проверка лога консоли на наличие ошибок")
-    void consoleShouldNotHaveErrorsTest() {
-        step("Открываем страницу 'https://www.performance-lab.ru'", () ->
-            open("https://www.performance-lab.ru"));
-
-        step("Лог консоли не должен содержать текст 'SEVERE'", () -> {
-            String consoleLogs = DriverUtils.getConsoleLogs();
-            String errorText = "SEVERE";
-
-            assertThat(consoleLogs).doesNotContain(errorText);
         });
     }
 
@@ -127,6 +112,75 @@ public class PerformanceLabWebTests extends TestBase {
         });
         step("Проверяем ссылку на youtube.com", () -> {
             $(".usr-social-block").$("a[href*='youtube']").should(exist);
+        });
+    }
+
+    @Test
+    @Description("Web services button should be clickable")
+    @DisplayName("Проверка кнопки 'Сайт' на главной странице")
+    void servicesButtonSiteTest() {
+        step("Открываем страницу https://www.performance-lab.ru", () ->
+                open("https://www.performance-lab.ru"));
+
+        step("Нажимаем кнопку 'Сайт'", () ->
+                $("#site_btn").$(byText("Сайт")).click());
+
+        step("Переходим в открывшуюся вкладку", () -> {
+            switchTo().window(1);
+        });
+
+        step("Проверка заголовка страницы", () -> {
+            String expectedTitle = "Аудит сайта — юзабилити, нагрузочное тестирование QA City";
+            String actualTitle = title();
+
+            assertThat(actualTitle).isEqualTo(expectedTitle);
+        });
+    }
+
+    @Test
+    @Description("Mobile services button should be clickable")
+    @DisplayName("Проверка кнопки 'Мобильное приложение' на главной странице")
+    void servicesButtonMobileTest() {
+        step("Открываем страницу https://www.performance-lab.ru", () ->
+                open("https://www.performance-lab.ru"));
+
+        step("Нажимаем кнопку 'Мобильное приложение'", () ->
+            $("#mobile_btn").$(byText("Мобильное приложение")).click());
+
+        step("Проверяем открытие формы", () -> {
+            switchTo().frame("hs-form-iframe-0");
+            $(byText("Свяжитесь с нами")).shouldBe(visible);
+        });
+    }
+
+    @Test
+    @Description("IT-system services button should be clickable")
+    @DisplayName("Проверка кнопки 'Мобильное приложение' на главной странице")
+    void servicesButtonItSystemTest() {
+        step("Открываем страницу https://www.performance-lab.ru", () ->
+                open("https://www.performance-lab.ru"));
+
+        step("Нажимаем кнопку 'IT-система'", () ->
+            $("#mobile_btn").$(byText("Мобильное приложение")).click());
+
+        step("Проверяем открытие формы", () -> {
+            switchTo().frame("hs-form-iframe-0");
+            $(byText("Свяжитесь с нами")).shouldBe(visible);
+        });
+    }
+
+    @Test
+    @Description("Page console log should not have errors")
+    @DisplayName("Проверка лога консоли на наличие ошибок")
+    void consoleShouldNotHaveErrorsTest() {
+        step("Открываем страницу 'https://www.performance-lab.ru'", () ->
+            open("https://www.performance-lab.ru"));
+
+        step("Лог консоли не должен содержать текст 'SEVERE'", () -> {
+            String consoleLogs = DriverUtils.getConsoleLogs();
+            String errorText = "SEVERE";
+
+            assertThat(consoleLogs).doesNotContain(errorText);
         });
     }
 }
