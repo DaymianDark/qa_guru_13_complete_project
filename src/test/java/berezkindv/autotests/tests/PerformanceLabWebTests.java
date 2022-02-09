@@ -21,7 +21,7 @@ public class PerformanceLabWebTests extends TestBase {
         step("Открываем страницу 'https://www.performance-lab.ru'", () ->
             open("https://www.performance-lab.ru"));
 
-        step("Проверка заголовка страницы", () -> {
+        step("Проверяем заголовок страницы", () -> {
             String expectedTitle = "Перфоманс Лаб - Услуги по тестированию программного обеспечения";
             String actualTitle = title();
 
@@ -30,13 +30,13 @@ public class PerformanceLabWebTests extends TestBase {
     }
 
     @Test
-    @Description("Menu should have item 'Тестирование сайта'")
-    @DisplayName("Проверка пункта 'Тестирование сайта' в верхнем меню")
+    @Description("'Services and products' menu check")
+    @DisplayName("Проверка меню 'Услуги и продукты'")
     void menuProductsTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
             open("https://www.performance-lab.ru"));
 
-        step("Разворачиваем меню", () -> {
+        step("Разворачиваем меню 'Услуги и продукты'", () -> {
             $("#menu-item-317").$(byText("Услуги и продукты")).hover();
         });
 
@@ -46,13 +46,13 @@ public class PerformanceLabWebTests extends TestBase {
     }
 
     @Test
-    @Description("Menu should have item 'Вакансии'")
+    @Description("'Vacancies' menu check")
     @DisplayName("Проверка пункта 'Вакансии' в верхнем меню")
     void menuVacanciesTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
             open("https://www.performance-lab.ru"));
 
-        step("Разворачиваем меню", () -> {
+        step("Разворачиваем меню 'Вакансии'", () -> {
             $("#menu-item-1619").$(byText("Вакансии")).hover();
         });
 
@@ -62,7 +62,7 @@ public class PerformanceLabWebTests extends TestBase {
     }
 
     @Test
-    @Description("Menu item 'Блог' check")
+    @Description("Menu 'Блог' check")
     @DisplayName("Проверка пункта 'Блог' в верхнем меню")
      void menuBlogTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
@@ -90,7 +90,7 @@ public class PerformanceLabWebTests extends TestBase {
 
     @Test
     @Description("Social links should exist")
-    @DisplayName("Проверка наличия ссылок социальных серей")
+    @DisplayName("Проверка наличия ссылок социальных сетей")
     void socialLinksShouldExist() {
         step("Открываем страницу 'https://www.performance-lab.ru'", () ->
                 open("https://www.performance-lab.ru"));
@@ -116,7 +116,7 @@ public class PerformanceLabWebTests extends TestBase {
     }
 
     @Test
-    @Description("Web services button should be clickable")
+    @Description("Site testing button should be clickable")
     @DisplayName("Проверка кнопки 'Сайт' на главной странице")
     void servicesButtonSiteTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
@@ -129,7 +129,7 @@ public class PerformanceLabWebTests extends TestBase {
             switchTo().window(1);
         });
 
-        step("Проверка заголовка страницы", () -> {
+        step("Проверяем заголовок страницы", () -> {
             String expectedTitle = "Аудит сайта — юзабилити, нагрузочное тестирование QA City";
             String actualTitle = title();
 
@@ -155,7 +155,7 @@ public class PerformanceLabWebTests extends TestBase {
 
     @Test
     @Description("IT-system services button should be clickable")
-    @DisplayName("Проверка кнопки 'Мобильное приложение' на главной странице")
+    @DisplayName("Проверка кнопки 'IT-система' на главной странице")
     void servicesButtonItSystemTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
                 open("https://www.performance-lab.ru"));

@@ -1,11 +1,37 @@
-# Project in Allure TestOps with manual & automated tests
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
+# Проект по автоматизации тестирования Performance Lab
+<a target="_blank" href="https://www.performance-lab.ru/">Вэб сайт Performance Lab</a>
 
-# Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
+## :pushpin: Содержание:
+
+- Технологии и инструменты
+- Функционал
+- Терминал
+- Jenkins
+- Allure отчет
+- Отчет в Telegram
+- Видео пример прохождения тестов
+
+## :rocket: Технологии и инструменты
+
+<a href="https://www.jetbrains.com/idea/"><img src="images/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/></a>
+<a href="https://www.java.com/"><img src="images/Java.svg" width="40" height="40"  alt="Java"/></a>
+<a href="https://github.com/"><img src="images/Github.svg" width="40" height="40"  alt="Github"/></a>
+<a href="https://junit.org/junit5/"><img src="images/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/></a>
+<a href="https://gradle.org/"><img src="images/Gradle.svg" width="40" height="40"  alt="Gradle"/></a>
+<a href="https://selenide.org/"><img src="images/Selenide.svg" width="40" height="40"  alt="Selenide"/></a>
+<a href="https://aerokube.com/selenoid/"><img src="images/Selenoid.svg" width="40" height="40"  alt="Selenoid"/></a>
+<a href="https://github.com/allure-framework/allure2"><img src="images/Allure_Report.svg" width="40" height="40"  alt="Allure"/></a>
+<a href="https://www.jenkins.io/"><img src="images/Jenkins.svg" width="40" height="40"  alt="Jenkins"/></a>
+
+## :scroll: Реальзованы проверки
+
+- ✓ Проверка
+
+## Jenkins job
+<a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/">Сборка в Jenkins</a>
 
 
-# USAGE examples
+
 
 ### For run remote tests need fill remote.properties or to pass value:
 
