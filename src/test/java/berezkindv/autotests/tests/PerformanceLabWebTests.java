@@ -47,7 +47,7 @@ public class PerformanceLabWebTests extends TestBase {
 
     @Test
     @Description("'Vacancies' menu check")
-    @DisplayName("Проверка пункта 'Вакансии' в верхнем меню")
+    @DisplayName("Проверка меню 'Вакансии'")
     void menuVacanciesTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
             open("https://www.performance-lab.ru"));
@@ -63,7 +63,7 @@ public class PerformanceLabWebTests extends TestBase {
 
     @Test
     @Description("Menu 'Блог' check")
-    @DisplayName("Проверка пункта 'Блог' в верхнем меню")
+    @DisplayName("Проверка пункта меню 'Блог'")
      void menuBlogTest() {
         step("Открываем страницу https://www.performance-lab.ru", () ->
             open("https://www.performance-lab.ru"));

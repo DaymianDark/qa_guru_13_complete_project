@@ -4,9 +4,9 @@
 ## :pushpin: Содержание:
 
 - Технологии и инструменты
-- Функционал
-- Терминал
-- Jenkins
+- Реализованные проверки
+- Запуск из терминала
+- Запуск в Jenkins
 - Allure отчет
 - Отчет в Telegram
 - Видео пример прохождения тестов
@@ -23,20 +23,26 @@
 <a href="https://github.com/allure-framework/allure2"><img src="images/Allure_Report.svg" width="40" height="40"  alt="Allure"/></a>
 <a href="https://www.jenkins.io/"><img src="images/Jenkins.svg" width="40" height="40"  alt="Jenkins"/></a>
 
-## :scroll: Реальзованы проверки
+## :scroll: Реализованные проверки
 
-- ✓ Проверка
+- ✓ Проверка заголовка страницы.
+- ✓ Проверка меню "Услуги и продукты".
+- ✓ Проверка меню "Вакансии".
+- ✓ Проверка пункта меню "Блог".
+- ✓ Проверка соответствия номера телефона.
+- ✓ Проверка наличия ссылок социальных сетей.
+- ✓ Проверка кнопки 'Сайт' на главной странице.
+- ✓ Проверка кнопки 'Мобильное приложение' на главной странице.
+- ✓ Проверка кнопки 'IT-система' на главной странице.
+- ✓ Проверка Проверка лога консоли на наличие ошибок.
 
-## Jenkins job
+### Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/">Сборка в Jenkins</a>
 
-
-
-
-### For run remote tests need fill remote.properties or to pass value:
+### <img src="images/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Запуск тестов с параметрами в Jenkins:
 
 * browser (default chrome)
-* browserVersion (default 89.0)
+* browserVersion (default 91.0)
 * browserSize (default 1920x1080)
 * browserMobileView (mobile device name, for example iPhone X)
 * remoteDriverUrl (url address from selenoid or grid)
