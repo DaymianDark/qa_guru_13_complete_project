@@ -8,6 +8,8 @@
 - [Сборка в Jenkins](#earth_africa-Jenkins-job)
 - [Запуск из терминала](#earth_africa-Запуск-тестов-из-терминала)
 - [Allure отчет](#earth_africa-Allure-отчет)
+- [Интеграция с Allure TestOps](#earth_africa-Интеграция-с-Allure-TestOps)
+- [Интеграция с Jira](#earth_africa-Интеграция-с-Jira)
 - [Отчет в Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
 - [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
 
@@ -38,7 +40,7 @@
 - ✓ Проверка кнопки 'IT-система' на главной странице.
 - ✓ Проверка Проверка лога консоли на наличие ошибок.
 
-## <img src="images/Jenkins.svg" width="30" height="30"  alt="Jenkins"/></a> Jenkins job
+## <img src="images/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/">Сборка в Jenkins</a>
 <p align="center">
 <a href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/"><img src="images/jenkins_job.png" alt="Jenkins"/></a>
@@ -74,7 +76,7 @@ test
 -Dthreads=${THREADS}
 ```
 
-## <img src="images/Allure_Report.svg" width="30" height="30"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/22/allure/">Allure report</a>
+## <img src="images/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/22/allure/">Allure report</a>
 
 ### Основное окно
 
@@ -94,7 +96,7 @@ test
 <img title="Allure Graphics" src="images/allure_graphics.png">
 </p>
 
-## <img src="images/Allure_EE.svg" width="30" height="30"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/10223">Allure TestOps</a>
+## <img src="images/Allure_EE.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/10223">Allure TestOps</a>
 
 ### Дашборд
 
@@ -108,13 +110,13 @@ test
 <img title="Allure TestOps Tests" src="images/testOps_tests.png">
 </p>
 
-## <img src="images/Jira.svg" width="30" height="30"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-628">Jira</a>
+## <img src="images/Jira.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с трекером задач <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-628">Jira</a>
 
 <p align="center">
 <img title="Jira" src="images/jira_task.png">
 </p>
 
-## <img src="images/Telegram.svg" width="30" height="30"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
+## <img src="images/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/allure_telegram.png">
@@ -122,7 +124,7 @@ test
 
 
 
-### <img src="images/Selenoid.svg" width="30" height="30"  alt="Allure"/></a> Примеры видео о прохождении тестов
+### <img src="images/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Примеры видео о прохождении тестов
 
 <p align="center">
 <img title="Selenoid Video" src="images/video1.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video2.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video3.gif" width="250" height="153"  alt="video">
