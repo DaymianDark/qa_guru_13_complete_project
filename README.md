@@ -1,18 +1,19 @@
-# Проект по автоматизации тестирования Performance Lab
+# Проект по автоматизации тестирования для Performance Lab
 <a target="_blank" href="https://www.performance-lab.ru/">Вэб сайт Performance Lab</a>
 
 ## :pushpin: Содержание:
 
-- Технологии и инструменты
-- Реализованные проверки
-- Запуск из терминала
-- Запуск в Jenkins
-- Allure отчет
-- Отчет в Telegram
-- Видео пример прохождения тестов
+- [Технологии и инструменты](#earth_africa-технологии-и-инструменты)
+- [Реализованные проверки](#earth_africa-Реализованные-проверки)
+- [Сборка в Jenkins](#earth_africa-Jenkins-job)
+- [Запуск из терминала](#earth_africa-Запуск-тестов-из-терминала)
+- [Allure отчет](#earth_africa-Allure-отчет)
+- [Отчет в Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
+- [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
 
 ## :rocket: Технологии и инструменты
 
+<p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="images/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="images/Java.svg" width="40" height="40"  alt="Java"/></a>
 <a href="https://github.com/"><img src="images/Github.svg" width="40" height="40"  alt="Github"/></a>
@@ -22,6 +23,7 @@
 <a href="https://aerokube.com/selenoid/"><img src="images/Selenoid.svg" width="40" height="40"  alt="Selenoid"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="images/Allure_Report.svg" width="40" height="40"  alt="Allure"/></a>
 <a href="https://www.jenkins.io/"><img src="images/Jenkins.svg" width="40" height="40"  alt="Jenkins"/></a>
+</p>
 
 ## :scroll: Реализованные проверки
 
@@ -36,41 +38,71 @@
 - ✓ Проверка кнопки 'IT-система' на главной странице.
 - ✓ Проверка Проверка лога консоли на наличие ошибок.
 
-### Jenkins job
+## <img src="images/Jenkins.svg" width="30" height="30"  alt="Jenkins"/></a> Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/">Сборка в Jenkins</a>
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/"><img src="images/jenkins_job.png" alt="Jenkins"/></a>
+</p>
 
-### <img src="images/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Запуск тестов с параметрами в Jenkins:
+### Параметры сборки в Jenkins:
 
-* browser (default chrome)
-* browserVersion (default 91.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
+- browser (браузер, по умолчанию chrome)
+- browserVersion (версия браузера, по умолчанию 91.0)
+- browserSize (размер окна браузера, по умолчанию 1920x1080)
+- browserMobileView (название мобильного устройства, для примера iPhone X)
+- remoteDriverUrl (логин, пароль и адрес удаленного сервера selenoid или grid)
+- videoStorage (адрес, по которому можно получить видео)
+- threads (количество потоков)
 
+### :computer: Запуск тестов из терминала
 
-Run tests with filled remote.properties:
+Локальный запуск:
 ```bash
 gradle clean test
 ```
 
-Run tests with not filled remote.properties:
+Удаленный запуск:
 ```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
+clean
+test
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DbrowserMobileView="${BROWSER_MOBILE}"
+-DremoteDriverUrl=https://${LOGIN}:${PASSWORD}@${REMOTE_DRIVER_URL}/wd/hub/
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
+-Dthreads=${THREADS}
 ```
 
-Serve report:
-```bash
-allure serve build/allure-results
-```
+## <img src="images/Allure_Report.svg" width="30" height="30"  alt="Allure"/></a> Allure отчет
 
+### Основное окно
 
-###### For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
-```bash
-gradle clean demowebshop
-```
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/allure_main.png">
+</p>
 
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
+### Тесты
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/allure_tests.png">
+</p>
+
+### Гафики
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/allure_graphics.png">
+</p>
+
+## <img src="images/Telegram.svg" width="30" height="30"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/allure_telegram.png">
+</p>
+
+### <img src="images/Selenoid.svg" width="30" height="30"  alt="Allure"/></a> Примеры видео о прохождении тестов
+
+<p align="center">
+<img title="Selenoid Video" src="images/video1.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video2.gif" width="250" height="153"  alt="video">
+<img title="Selenoid Video" src="images/video3.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video4.gif" width="250" height="153"  alt="video">
+</p>
