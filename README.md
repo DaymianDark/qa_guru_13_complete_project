@@ -74,7 +74,7 @@ test
 -Dthreads=${THREADS}
 ```
 
-## <img src="images/Allure_Report.svg" width="30" height="30"  alt="Allure"/></a> Allure отчет
+## <img src="images/Allure_Report.svg" width="30" height="30"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_performance_lab_complete_project/22/allure/">Allure report</a>
 
 ### Основное окно
 
@@ -85,13 +85,33 @@ test
 ### Тесты
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/allure_tests.png">
+<img title="Allure Tests" src="images/allure_tests.png">
 </p>
 
 ### Гафики
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/allure_graphics.png">
+<img title="Allure Graphics" src="images/allure_graphics.png">
+</p>
+
+## <img src="images/Allure_EE.svg" width="30" height="30"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/10223">Allure TestOps</a>
+
+### Дашборд
+
+<p align="center">
+<img title="Allure TestOps Dashboard" src="images/testOps_main.png">
+</p>
+
+### Тест-кейсы
+
+<p align="center">
+<img title="Allure TestOps Tests" src="images/testOps_tests.png">
+</p>
+
+## <img src="images/Jira.svg" width="30" height="30"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-628">Jira</a>
+
+<p align="center">
+<img title="Jira" src="images/jira_task.png">
 </p>
 
 ## <img src="images/Telegram.svg" width="30" height="30"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
@@ -100,9 +120,10 @@ test
 <img title="Allure Overview Dashboard" src="images/allure_telegram.png">
 </p>
 
+
+
 ### <img src="images/Selenoid.svg" width="30" height="30"  alt="Allure"/></a> Примеры видео о прохождении тестов
 
 <p align="center">
-<img title="Selenoid Video" src="images/video1.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video2.gif" width="250" height="153"  alt="video">
-<img title="Selenoid Video" src="images/video3.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video4.gif" width="250" height="153"  alt="video">
+<img title="Selenoid Video" src="images/video1.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video2.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video3.gif" width="250" height="153"  alt="video">
 </p>
