@@ -95,18 +95,18 @@ public class PerformanceLabWebTests extends TestBase {
         step("Открываем страницу 'https://www.performance-lab.ru'", () ->
                 open("https://www.performance-lab.ru"));
 
-        step("Проверяем ссылку на facebook.com", () -> {
-            $(".usr-social-block").$("a[href*='facebook']").should(exist);
-        });
+//        step("Проверяем ссылку на facebook.com", () -> {
+//            $(".usr-social-block").$("a[href*='facebook']").should(exist);
+//        });
         step("Проверяем ссылку на linkedin.com", () -> {
             $(".usr-social-block").$("a[href*='linkedin']").should(exist);
         });
         step("Проверяем ссылку на twitter.com", () -> {
             $(".usr-social-block").$("a[href*='twitter']").should(exist);
         });
-        step("Проверяем ссылку на instagram.com", () -> {
-            $(".usr-social-block").$("a[href*='instagram']").should(exist);
-        });
+//        step("Проверяем ссылку на instagram.com", () -> {
+//            $(".usr-social-block").$("a[href*='instagram']").should(exist);
+//        });
         step("Проверяем ссылку на vk.com", () -> {
             $(".usr-social-block").$("a[href*='vk.com']").should(exist);
         });
